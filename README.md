@@ -31,6 +31,7 @@ you will:
     -be able to change theme before posting
 ```
 
+
 # WireFrames
 
 Front Page
@@ -67,3 +68,7 @@ After user sign-in, they will will be presented with a navbar, that will remain 
 # E-R-D
 
  <img width="711" alt="Screen Shot 2022-10-09 at 11 08 50 PM" src="https://user-images.githubusercontent.com/68655342/194794313-81f49a6b-ac4d-49ea-a0cf-c73bf8e53b88.png">
+
+
+### Backup Plan 
+-do a project with cars and allow user to post reviews on the vehicle
