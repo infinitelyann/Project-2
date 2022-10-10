@@ -15,6 +15,23 @@
 - Mongoose
 - Bootstrap
 
+### seed example 
+```
+ const blogPosts = [
+   {theme: themeChoices[i], image: imageChoices[i], content: 'user input'}
+ ]
+ 
+ const themeChoices = [
+   {background-color: black, font: 'fantasy', color: black},
+   {background-color: purples, font: 'helvetica', color: dark purple}
+ ]
+ 
+ const imageChoice = [
+  image,
+  image,
+  image
+ ]
+ ```
 # as a user,
 
 you will:
@@ -68,6 +85,10 @@ After user sign-in, they will will be presented with a navbar, that will remain 
 # E-R-D
 
  <img width="711" alt="Screen Shot 2022-10-09 at 11 08 50 PM" src="https://user-images.githubusercontent.com/68655342/194794313-81f49a6b-ac4d-49ea-a0cf-c73bf8e53b88.png">
+
+## Project Week Plan
+
+<img width="796" alt="Screen Shot 2022-10-10 at 9 54 41 AM" src="https://user-images.githubusercontent.com/68655342/194883361-8c093515-5b13-4341-a1d9-42c3051ebc45.png">
 
 
 ### Backup Plan 
