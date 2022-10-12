@@ -1,6 +1,6 @@
 // Import Dependencies
 const express = require('express')
-const Theme = require('../models/themes')
+const Post = require('../models/themes')
 
 // Create router
 const router = express.Router()
@@ -23,7 +23,7 @@ router.use((req, res, next) => {
 
 // index ALL
 router.get('/', (req, res) => {
-	Theme.find({})
+	Post.find({})
 		.then(themes => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
@@ -35,13 +35,13 @@ router.get('/', (req, res) => {
 		})
 })
 
-// index that shows only the user's themes
+// index that shows only the user's posts
 router.get('/mine', (req, res) => {
     // destructure user info from req.session
     const { username, userId, loggedIn } = req.session
-	Theme.find({ owner: userId })
-		.then(themes => {
-			res.render('themes/index', {themes, username, loggedIn })
+	Post.find({ owner: userId })
+		.then(posts => {
+			res.render('posts/index', { posts, username, loggedIn })
 		})
 		.catch(error => {
 			res.redirect(`/error?error=${error}`)
@@ -51,7 +51,7 @@ router.get('/mine', (req, res) => {
 // new route -> GET route that renders our page with the form
 router.get('/new', (req, res) => {
 	const { username, userId, loggedIn } = req.session
-	res.render('themes/new', { username, loggedIn })
+	res.render('posts/new', { username, loggedIn })
 })
 
 // create -> POST route that actually calls the db and makes a new document
@@ -59,10 +59,10 @@ router.post('/', (req, res) => {
 	req.body.ready = req.body.ready === 'on' ? true : false
 
 	req.body.owner = req.session.userId
-	Theme.create(req.body)
-		.then(theme => {
-			console.log('this was returned from create', theme)
-			res.redirect('/themes')
+	Post.create(req.body)
+		.then(post => {
+			console.log('this was returned from create', post)
+			res.redirect('/posts')
 		})
 		.catch(error => {
 			res.redirect(`/error?error=${error}`)
@@ -72,10 +72,10 @@ router.post('/', (req, res) => {
 // edit route -> GET that takes us to the edit form view
 router.get('/:id/edit', (req, res) => {
 	// we need to get the id
-	const themeId = req.params.id
-	Theme.findById(themeId)
-		.then(theme => {
-			res.render('themes/edit', { theme })
+	const postId = req.params.id
+	Post.findById(postId)
+		.then(post => {
+			res.render('posts/edit', { post })
 		})
 		.catch((error) => {
 			res.redirect(`/error?error=${error}`)
@@ -84,12 +84,12 @@ router.get('/:id/edit', (req, res) => {
 
 // update route
 router.put('/:id', (req, res) => {
-	const themeId = req.params.id
+	const postId = req.params.id
 	req.body.ready = req.body.ready === 'on' ? true : false
 
-	Theme.findByIdAndUpdate(themeId, req.body, { new: true })
-		.then(theme => {
-			res.redirect(`/themes/${theme.id}`)
+	Post.findByIdAndUpdate(postId, req.body, { new: true })
+		.then(post => {
+			res.redirect(`/posts/${post.id}`)
 		})
 		.catch((error) => {
 			res.redirect(`/error?error=${error}`)
@@ -98,35 +98,28 @@ router.put('/:id', (req, res) => {
 
 // show route
 router.get('/:id', (req, res) => {
-	const themeId = req.params.id
-	Theme.findById(themeId)
-		.then(theme => {
+	const postId = req.params.id
+	Post.findById(postId)
+		.then(post => {
             const {username, loggedIn, userId} = req.session
-			res.render('themes/show', { theme, username, loggedIn, userId })
+			res.render('posts/show', { post, username, loggedIn, userId })
 		})
 		.catch((error) => {
 			res.redirect(`/error?error=${error}`)
 		})
 })
 
+// delete route
 router.delete('/:id', (req, res) => {
-    
-    // get the fruit id
-    const themeId = req.params.id
-
-    // delete and REDIRECT
-    Theme.findByIdAndRemove(themeId)
-        .then(theme => {
-            console.log("what")
-            // if the delete is successful, send the user back to the index page
-            res.redirect('/themes')
-        })
-        .catch(err => {
-            console.log("hello")
-            res.redirect(`/error?error=${err}`)
-
-        })
-
+	console.log('this is working')
+	const postId = req.params.id
+	Post.findByIdAndRemove(postId)
+		.then(post => {
+			res.redirect('/posts')
+		})
+		.catch(error => {
+			res.redirect(`/error?error=${error}`)
+		})
 })
 
 // Export the Router
