@@ -7,15 +7,16 @@
         <label class="form-label">Title:
         </label>
         <input type="text" name="title" placeholder="{{ theme.title }}" value="{{ theme.title }}" class="form-control">
-        <label class="form-label">Body:</label>
-        <input type="text" name="body" placeholder="{{ theme.body }}" value="{{ theme.body }}" class="form-control">
-        <label class="form-label">Amount:</label>
-        <input type="number" name="amount" value="{{ theme.amount }}" class="form-control">
-        <label class="form-label">Ready:</label>
-        <input type="checkbox" name="ready" class="form-check-input"
-          {% if theme.ready %}
-          checked
-          {% endif %}>
+        <label class="form-label">
+          Background Color:
+        </label>
+        <input class="form-control" type="color" name="backgroundColor" placeholder="{{ theme.backgroundColor }}" value="{{ theme.backgroundColor }}">
+        <label class="form-label">Foreground Color:
+        </label>
+        <input class="form-control" type="color" name="foregroundColor" placeholder="{{ theme.foregroundColor }}" value="{{ theme.foregroundColor }}">
+        <label class="form-label">Text Color:
+        </label>
+        <input class="form-control" type="color" name="textColor" placeholder="{{ theme.textColor }}" value="{{ theme.textColor }}">
       </fieldset>
       <input type="submit" value="Edit Theme" class="btn btn-success">
     </form>
