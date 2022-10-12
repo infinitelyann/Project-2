@@ -1,0 +1,32 @@
+{% layout 'layout.liquid'%}
+{% block content %}
+  <div>
+    <h2 class="display-6">All Themes</h2>
+    <div class="row">
+      {% for theme in themes %}
+        <div class="card" style="width: 18rem;">
+          <h5 class="card-header">{{ theme.title }}
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title">
+              Ready?:
+              {{ theme.ready }}
+            </h5>
+            <p class="card-text">
+              Body:
+              {{ theme.body }}
+            </p>
+            <p class="card-text">
+              Amount:
+              {{theme.amount }}
+            </p>
+            <a href="/themes/{{ theme.id }}" class="btn btn-info">
+              View
+              {{ theme.title }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
