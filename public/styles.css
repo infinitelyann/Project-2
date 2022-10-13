@@ -4,3 +4,13 @@ body {
     text-decoration: underline;
     font-style: italic;
 }
+
+.container-lg{
+    /* align-self: center; */
+    padding-top: 100px;
+}
+
+.carousel-item{
+    width: 30%;
+    height: auto;
+}
