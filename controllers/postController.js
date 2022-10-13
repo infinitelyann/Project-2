@@ -2,7 +2,7 @@
 // Import Dependencies
 ////////////////////////////////////////
 const express = require("express")
-const Themes = require("../models/themes")
+const Theme = require("../models/themes")
 
 /////////////////////////////////////////
 // Create Router
@@ -29,7 +29,7 @@ router.post("/:themeId", (req, res) => {
         //  --> send a success response status a 
         .then(theme => {
            
-            themes.posts.push(req.body)
+            theme.posts.push(req.body)
             
             return theme.save()
         })
@@ -51,7 +51,8 @@ router.delete('/delete/:themeId/:postId', (req, res) => {
     Theme.findById(themeId)
         .then(theme => {
             // get the post
-            const thePost = themes.posts.id(postId)
+            const thePost = theme.posts.id(postId)
+	
             console.log('this is the post that was found', thePost)
             // make sure the user is logged in
             if (req.session.loggedIn) {
