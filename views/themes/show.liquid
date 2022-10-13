@@ -1,23 +1,18 @@
 {% layout 'layout.liquid' %}
 {% block content %}
-  <div class="container-md">
+  <div style="height:50%; width:30% ;">
     <article>
       <h2>
         {{ theme.title }}
 
       </h2>
-      <h3>Background Color:
-        {{ theme.backgroundColor }}
-      </h3>
-      <div class="colorBox" style="background-color: {{theme.backgroundColor}}"></div>
-      <h3>Foreground Color:
-        {{ theme.foregroundColor }}
-      </h3>
-      <div class="colorBox" style="background-color: {{theme.foregroundColor}}"></div>
-      <h3>Text Color:
-        {{ theme.textColor }}
-      </h3>
-      <div class="colorBox" style="background-color: {{theme.textColor}}"></div>
+      <div class="w-100 p-3" style="height:60% ;background-color: {{ theme.backgroundColor }}">
+        <div class="w-75 p-3" style="background-color: {{ theme.foregroundColor }}">
+          <div class="w-25 p-3" style="background-color: {{theme.textColor }}"></div>
+        </div>
+      </div>
+
+
 
       {% if theme.owner == userId %}
         <div class="btn-group">
