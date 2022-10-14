@@ -120,7 +120,7 @@ router.put("/:id", (req, res) => {
 router.get('/:id', (req, res) => {
 	const id = req.params.id
 	Theme.findById(id)
-	.populate("posts.author", "username")
+	    .populate("posts.author", "username")
 		.then(theme => {
 			const username = req.session.username
             const loggedIn = req.session.loggedIn

@@ -8,7 +8,7 @@
           {{ post.author.username }}
         </small>
         {% if post.author == userId %}
-          <form action="/posts/delete/{{themes.id}}/{{post.id}}?_method=DELETE" method="POST">
+          <form action="/posts/delete/{{theme.id}}/{{post.id}}?_method=DELETE" method="POST">
             <input class="btn btn-danger" type="submit" value="X">
           </form>
         {% endif %}

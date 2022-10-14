@@ -1,9 +1,9 @@
 {% layout 'layout.liquid' %}
 {% block content %}
   <div class="container-sm">
-    <form action="/themes/{{theme.id}}?_method=PUT" method="POST"></form>
+    <form action="/themes/{{theme.id}}?_method=PUT" method="POST">
       <fieldset>
-        <legend>Edit 
+        <legend>Edit
           {{ theme.title }}
         </legend>
         <label class="form-label">Title:
