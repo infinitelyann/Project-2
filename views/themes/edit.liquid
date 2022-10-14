@@ -1,24 +1,26 @@
 {% layout 'layout.liquid' %}
 {% block content %}
   <div class="container-sm">
-    <form action="/themes" method="POST">
+    <form action="/themes/{{theme.id}}?_method=PUT" method="POST"></form>
       <fieldset>
-        <legend>Create New Theme</legend>
+        <legend>Edit 
+          {{ theme.title }}
+        </legend>
         <label class="form-label">Title:
         </label>
         <input type="text" name="title" placeholder="{{ theme.title }}" value="{{ theme.title }}" class="form-control">
         <label class="form-label">
           Background Color:
         </label>
-        <input class="form-control" type="color" name="backgroundColor" placeholder="{{ theme.backgroundColor }}" value="{{ theme.backgroundColor }}">
+        <input class="form-control" type="color" name="backgroundColor" placeholder="background" value="{{ theme.backgroundColor }}">
         <label class="form-label">Foreground Color:
         </label>
-        <input class="form-control" type="color" name="foregroundColor" placeholder="{{ theme.foregroundColor }}" value="{{ theme.foregroundColor }}">
+        <input class="form-control" type="color" name="foregroundColor" placeholder="foreground " value="{{ theme.foregroundColor }}">
         <label class="form-label">Text Color:
         </label>
-        <input class="form-control" type="color" name="textColor" placeholder="{{ theme.textColor }}" value="{{ theme.textColor }}">
+        <input class="form-control" type="color" name="textColor" placeholder=" textColor " value="{{ theme.textColor }}">
       </fieldset>
-      <input type="submit" value="Edit Theme" class="btn btn-success">
+      <input type="submit" value="Edit {{ theme.title }}" class="btn btn-success">
     </form>
   </div>
 {% endblock %}
