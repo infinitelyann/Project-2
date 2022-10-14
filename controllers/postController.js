@@ -58,10 +58,10 @@ router.delete('/delete/:themeId/:postId', (req, res) => {
             if (req.session.loggedIn) {
                 // only let the author of the post delete it
                 if (thePost.author == req.session.userId) {
-        
+                    console.log('themeId?', themeId)
                     thePost.remove()
                     theme.save()
-                    res.sendStatus(204)
+                    res.redirect(`/themes/${themeId}`)
 
                 } else {
                     res.sendStatus(401)

@@ -11,24 +11,24 @@ const Themes = require('./themes')
 const db = mongoose.connection
 console.log('db in seed', db)
 db.on('open', () => {
-	// array of starter fruits
-	const startThemes = [
-		{ name: 'Orange', color: 'orange', readyToEat: false },
-		{ name: 'Grape', color: 'purple', readyToEat: false },
-		{ name: 'Banana', color: 'orange', readyToEat: false },
-		{ name: 'Strawberry', color: 'red', readyToEat: false },
-		{ name: 'Coconut', color: 'brown', readyToEat: false },
-	]
+	
+	// const startThemes = [
+	// 	{ title:"shades of purple" , backgroundColor: , foregroundColor: , textColor: },
+	// 	{ title:"tropical sunshine" , backgroundColor: , foregroundColor: , textColor: },
+	// 	{ title:"forrest" , backgroundColor: , foregroundColor: , textColor: },
+	// 	{ title:"greyscale" , backgroundColor: , foregroundColor: , textColor: },
+	// 	{ title:"neon" , backgroundColor: , foregroundColor: , textColor: },
+	// ]
 
 	// when we seed data, there are a few steps involved
 	// delete all the data that already exists(will only happen if data exists)
 	Themes.remove({})
         .then(deletedThemes => {
-		    console.log('this is what remove returns', deletedThemess)
+		    console.log('this is what remove returns', deletedThemes)
 		    // then we create with our seed data
-            Themes.create(startThemess)
+            Themes.create(startThemes)
                 .then((data) => {
-                    console.log('Here are the new seed fruits', data)
+                    console.log('Here are the new seed themes', data)
                     db.close()
                 })
                 .catch(error => {
