@@ -34,7 +34,8 @@ router.post("/:themeId", (req, res) => {
             return theme.save()
         })
         .then(theme => {
-            res.status(200).json({ theme: theme })
+            // res.status(200).json({ theme: theme })
+            res.redirect(`/themes/${theme.id}`)
         })
         // do something else if it doesn't work
         //  --> send some kind of error depending on what went wrong
