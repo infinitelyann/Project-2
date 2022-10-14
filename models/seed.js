@@ -2,7 +2,7 @@
 // Import Dependencies
 ///////////////////////////////////////
 const mongoose = require('./connection')
-const Fruit = require('./themes')
+const Themes = require('./themes')
 
 ///////////////////////////////////////////
 // Seed Code
@@ -22,11 +22,11 @@ db.on('open', () => {
 
 	// when we seed data, there are a few steps involved
 	// delete all the data that already exists(will only happen if data exists)
-	Fruit.remove({})
+	Themes.remove({})
         .then(deletedThemes => {
-		    console.log('this is what remove returns', deletedFruits)
+		    console.log('this is what remove returns', deletedThemess)
 		    // then we create with our seed data
-            Fruit.create(startFruits)
+            Themes.create(startThemess)
                 .then((data) => {
                     console.log('Here are the new seed fruits', data)
                     db.close()

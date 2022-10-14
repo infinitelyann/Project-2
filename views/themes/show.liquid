@@ -8,10 +8,13 @@
         <div class="w-75 p-3" style="background-color: {{ theme.foregroundColor }}">
           <div class="w-25 p-3" style="background-color: {{theme.textColor }}"></div>
         </div>
+    <div class="btn-group">
 
-        <form action="/theme/{{theme.id}}?_method=DELETE" method="POST">
+          <a class="btn btn-primary" href="/themes/edit/{{theme.id}}">Edit</a>
+        <form action="/themes/{{theme.id}}?_method=DELETE" method="POST">
           <input class="btn btn-danger" type="submit" value="Delete">
         </form>
+        </div>
       </div>
 
     </article>
