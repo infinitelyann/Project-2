@@ -14,6 +14,7 @@ const themeSchema = new Schema(
 		title: { type: String, required: true },
 		backgroundColor: { type: String, required: true },
         foregroundColor: { type: String, required: true },
+		image: {type: String, required: true },
 		textColor: { type: String, required: true },
 		owner: {
 			type: Schema.Types.ObjectID,
