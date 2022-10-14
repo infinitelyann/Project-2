@@ -13,9 +13,9 @@ console.log('db in seed', db)
 db.on('open', () => {
 	
 	// const startThemes = [
-	// 	{ title:"shades of purple" , backgroundColor: , foregroundColor: , textColor: },
-	// 	{ title:"tropical sunshine" , backgroundColor: , foregroundColor: , textColor: },
-	// 	{ title:"forrest" , backgroundColor: , foregroundColor: , textColor: },
+	// 	{ title:"shades of purple" , backgroundColor:'#251B37' , foregroundColor:#FFECEF , textColor:#372948 },
+	// 	{ title:"tropical sunshine" , backgroundColor:'#F48B29' , foregroundColor:"#374316"; , textColor: #AC0D0D },
+	// 	{ title:"forrest" , backgroundColor:#3F4E4F , foregroundColor:#809A6F , textColor:#00303F , },
 	// 	{ title:"greyscale" , backgroundColor: , foregroundColor: , textColor: },
 	// 	{ title:"neon" , backgroundColor: , foregroundColor: , textColor: },
 	// ]

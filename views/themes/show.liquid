@@ -10,10 +10,7 @@
         </div>
     <div class="btn-group">
 
-          <a class="btn btn-primary" href="/themes/edit/{{theme.id}}">Edit</a>
-        <form action="/themes/{{theme.id}}?_method=DELETE" method="POST">
-          <input class="btn btn-danger" type="submit" value="Delete">
-        </form>
+        
         </div>
       </div>
 
@@ -22,11 +19,17 @@
     </h4>post:</h4>
     <hr>
     {% if loggedIn %}
+      <a class="btn btn-primary" href="/themes/edit/{{theme.id}}">Edit</a>
+        <form action="/themes/{{theme.id}}?_method=DELETE" method="POST">
+          <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
       <div class="col-md-6">
         <form action="/posts/{{theme.id}}" method="POST">
           <fieldset>
-            <legend>Add post</legend>
-            <label class="form-label">post:</label>
+            <legend>make post</legend>
+            <label class="form-label">post box color:</label>
+            <input class="form-control" type="color" name="boxColor" class="form-control">
+            <label class="form-label">angst:</label>
             <input class="form-control mb-1" type="text" placeholder="enter your angst..." name="note" required>
           </fieldset>
           <input class="btn btn-success" type="submit" value="add angst">
@@ -39,7 +42,7 @@
     {% endif %}
     <hr>
     {% if theme.posts.length > 0%}
-      <div class="container-sm justify-content-center">
+      <div class="container-sm justify-content-center" >
         <div class="col-md-8 col-lg-6">
           {% for post in theme.posts %}
             {% render '../post.liquid', post: post, userId: userId, theme: theme %}

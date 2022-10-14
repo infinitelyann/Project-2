@@ -11,6 +11,7 @@ const postSchema = new Schema({
         type: String, 
         required: true
     }, 
+    boxColor: { type: String, required: true },
     author: {
         type: Schema.Types.ObjectId, 
         ref: 'User', 
