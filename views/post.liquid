@@ -3,13 +3,13 @@
     <div class="card-body">
       <p>{{ post.note }}
       </p>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between" style="color:{{theme.fontColor}}">
         <small>@
           {{ post.author.username }}
         </small>
         {% if post.author == userId %}
           <form action="/posts/delete/{{theme.id}}/{{post.id}}?_method=DELETE" method="POST">
-            <input class="btn btn-danger" type="submit" value="X">
+            <input class="btn" type="submit" value="X" style="background-color:{{theme.foregroundColor}} ;">
           </form>
         {% endif %}
       </div>

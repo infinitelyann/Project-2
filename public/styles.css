@@ -20,3 +20,25 @@ img{
     max-height: 100%;
     display: block; /* remove extra space below image */
 }
+
+.background{
+    height: fit-content;
+    width:40%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.foreground{
+    height: fit-content;
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+
+}
+.post-image{
+    height: 100%;
+    width:fit-content;
+    
+
+}
