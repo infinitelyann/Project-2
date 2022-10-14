@@ -4,17 +4,27 @@
     <article>
       <h2>{{theme.title}}
       </h2>
-     
         <div class="background" style="background-color: {{ theme.backgroundColor }}">
           <div class="foreground" style="background-color: {{ theme.foregroundColor }}">
-           
               <div class="post-image">
                 <img class="img-fluid" src="{{theme.image}}">
+                <div class="container-sm justify-content-center" style="background-color: {{ post.boxColor }}">
+                    {% if theme.posts.length > 0%}
+                          <div class="col-md-8 col-lg-6">
+                            {% for post in theme.posts %}
+                              {% render '../post.liquid', post: post, userId: userId, theme: theme %}
+                            {% endfor %}
+                          </div>
+                        
+                    {% else %}
+                        <small>no angst yet...</small>
+                      {% endif %}
+                </div>
+                  
               </div>
-                
-              
             </div>
           </div>
+       
        
     <div class="btn-group">
 
@@ -49,17 +59,7 @@
       </div>
     {% endif %}
     <hr>
-    {% if theme.posts.length > 0%}
-      <div class="container-sm justify-content-center" style="background-color: {{ post.boxColor }}" >
-        <div class="col-md-8 col-lg-6">
-          {% for post in theme.posts %}
-            {% render '../post.liquid', post: post, userId: userId, theme: theme %}
-          {% endfor %}
-        </div>
-      </div>
-    {% else %}
-      <small>no angst yet...</small>
-    {% endif %}
+  
   </div>
 {% endblock %}
 
