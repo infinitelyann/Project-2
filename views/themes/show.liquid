@@ -1,5 +1,6 @@
 {% layout 'layout.liquid' %}
 {% block content %}
+
   <div class="container-md">
     <article>
       <h2>{{theme.title}}
@@ -34,14 +35,11 @@
 
     </article>
     <hr>
-    </h4>post:</h4>
-    <hr>
     {% if loggedIn %}
-      <a class="btn" href="/themes/edit/{{theme.id}}" style="background-color: {{ post.boxColor }}">Edit</a>
+      <a class="btn" href="/themes/edit/{{theme.id}}" style="background-color: {{ post.boxColor }}"></h4>edit</h4></a>
         <form action="/themes/{{theme.id}}?_method=DELETE" style="background-color: {{ post.boxColor }}" method="POST">
-          <input class="btn " type="submit" value="Delete">
+          <input class="btn " type="submit" value="delete">
         </form>
-      <div class="col-md-6">
         <form action="/posts/{{theme.id}}" method="POST">
           <fieldset>
             <legend>make post</legend>
@@ -50,17 +48,18 @@
             <label class="form-label">angst:</label>
             <input class="form-control mb-1" type="text" placeholder="enter your angst..." name="note" required>
           </fieldset>
-          <input class="btn btn-success" type="submit" value="add angst">
+          <input class="btn " type="submit" value="make post">
         </form>
-      </div>
+    
     {% else %}
-      <div class="col-md-6">
+      
         <small>If you'd like to make an angsty post, please log in...</small>
-      </div>
+    
     {% endif %}
     <hr>
   
   </div>
+  
 {% endblock %}
 
 
