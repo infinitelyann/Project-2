@@ -8,6 +8,7 @@ body {
     display: inline;
     height: fit-content;
 }
+
 #edit-btn{
     margin-left: 10px;
 }
@@ -36,7 +37,10 @@ ul {
 .img-fluid{
     max-width: 100%;
     max-height: auto;
-    display: block; /* remove extra space below image */
+    display: block; 
+    z-index: 1;
+    position: relative;
+    
 }
 
 .background{
@@ -44,6 +48,7 @@ ul {
     width:60%;
     padding-top: 100px;
     padding-bottom: 100px;
+    
    
 
 }
@@ -52,14 +57,29 @@ ul {
     width:100%;
     padding-left: 100px;
     padding-right: 100px;
+    position: relative;
+    z-index: 1;
+    
+   
     
 
 }
 .post-image{
     height: 100%;
-    width:fit-content;    
-
+    width:fit-content; 
+    position: relative; 
+    z-index: 2;
 }
+.mb-4{
+ 
+}
+#post-over-image{
+    position: relative;
+    z-index: 3;
+    bottom: 250px;
+    left:250px;
+}
+
 
 
 

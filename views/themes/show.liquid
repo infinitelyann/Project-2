@@ -1,40 +1,43 @@
 {% layout 'layout.liquid' %}
 {% block content %}
 
-  <div class="container-md">
-    <article>
-      <h2>{{theme.title}}
-      </h2>
-      <div class="background" style="background-color: {{ theme.backgroundColor }}">
-        <div class="foreground" style="background-color: {{ theme.foregroundColor }}">
-          <div class="post-image">
-            <img class="img-fluid" src="{{theme.image}}">
-            <div class="container-sm justify-content-center" style="background-color: {{ post.boxColor }}">
-              {% if theme.posts.length > 0%}
-                <div class="col-md-8 col-lg-6">
-                  {% for post in theme.posts %}
-                    {% render '../post.liquid', post: post, userId: userId, theme: theme %}
-                  {% endfor %}
-                </div>
-
-              {% else %}
-                <small>no angst yet...</small>
-              {% endif %}
-            </div>
-
-          </div>
+<div class="container-md">
+  <article>
+    <h2>{{theme.title}}
+    </h2>
+    <div class="background" style="background-color: {{ theme.backgroundColor }}">
+      <div class="foreground" style="background-color: {{ theme.foregroundColor }}">
+        <div class="post-image">
+          <img class="img-fluid" src="{{theme.image}}">
         </div>
       </div>
+      <div id="post-over-image" style="background-color: {{ post.boxColor }}">
+        {% if theme.posts.length > 0%}
+        <div class="col-md-8 col-lg-6">
+          {% for post in theme.posts %}
+          {% render '../post.liquid', post: post, userId: userId, theme: theme %}
+          {% endfor %}
+        </div>
+
+        {% else %}
+        <small>no angst yet...</small>
+        {% endif %}
 
 
-      <div class="btn-group">
+
+      </div>
+    </div>
+
+
+    <div class="btn-group">
 
 
 
-        <hr>
-        {% if loggedIn %}
-          <div>
-            <a class="btn btn-outline-dark " href="/themes/edit/{{theme.id}}" style="background-color: {{ post.boxColor }}">edit
+      <hr>
+      {% if loggedIn %}
+      <div>
+        <a class="btn btn-outline-dark " href="/themes/edit/{{theme.id}}"
+          style="background-color: {{ post.boxColor }}">edit
         </a>
       </div>
 
@@ -43,23 +46,24 @@
         <input class="btn btn-outline-dark " type="submit" value="delete">
       </form>
       <form action="/posts/{{theme.id}}" method="POST">
-        <input class="btn btn-outline-dark " type="submit" value="make post">
+        <input class="btn btn-outline-dark " type="submit" value="see angsty blogpost">
         <fieldset>
           <label class="form-label">post box color:</label>
           <input class="form-control" type="color" name="boxColor" class="form-control">
+
           <label class="form-label">angst:</label>
           <input class="form-control mb-1" type="text" placeholder="enter your angst..." name="note" required>
         </fieldset>
 
       </form>
 
-    {% else %}
+      {% else %}
 
       <small>If you'd like to make an angsty post, please log in...</small>
 
-    {% endif %}
-    <hr>
+      {% endif %}
+      <hr>
 
-  </div>
+    </div>
 
-{% endblock %}
+    {% endblock %}
