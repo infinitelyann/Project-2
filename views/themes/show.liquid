@@ -5,62 +5,61 @@
     <article>
       <h2>{{theme.title}}
       </h2>
-        <div class="background" style="background-color: {{ theme.backgroundColor }}">
-          <div class="foreground" style="background-color: {{ theme.foregroundColor }}">
-              <div class="post-image">
-                <img class="img-fluid" src="{{theme.image}}">
-                <div class="container-sm justify-content-center" style="background-color: {{ post.boxColor }}">
-                    {% if theme.posts.length > 0%}
-                          <div class="col-md-8 col-lg-6">
-                            {% for post in theme.posts %}
-                              {% render '../post.liquid', post: post, userId: userId, theme: theme %}
-                            {% endfor %}
-                          </div>
-                        
-                    {% else %}
-                        <small>no angst yet...</small>
-                      {% endif %}
+      <div class="background" style="background-color: {{ theme.backgroundColor }}">
+        <div class="foreground" style="background-color: {{ theme.foregroundColor }}">
+          <div class="post-image">
+            <img class="img-fluid" src="{{theme.image}}">
+            <div class="container-sm justify-content-center" style="background-color: {{ post.boxColor }}">
+              {% if theme.posts.length > 0%}
+                <div class="col-md-8 col-lg-6">
+                  {% for post in theme.posts %}
+                    {% render '../post.liquid', post: post, userId: userId, theme: theme %}
+                  {% endfor %}
                 </div>
-                  
-              </div>
-            </div>
-          </div>
-       
-       
-    <div class="btn-group">
 
-        
+              {% else %}
+                <small>no angst yet...</small>
+              {% endif %}
+            </div>
+
+          </div>
         </div>
       </div>
 
-    </article>
-    <hr>
-    {% if loggedIn %}
-      <a class="btn" href="/themes/edit/{{theme.id}}" style="background-color: {{ post.boxColor }}"></h4>edit</h4></a>
-        <form action="/themes/{{theme.id}}?_method=DELETE" style="background-color: {{ post.boxColor }}" method="POST">
-          <input class="btn " type="submit" value="delete">
-        </form>
-        <form action="/posts/{{theme.id}}" method="POST">
-          <fieldset>
-            <legend>make post</legend>
-            <label class="form-label">post box color:</label>
-            <input class="form-control" type="color" name="boxColor" class="form-control">
-            <label class="form-label">angst:</label>
-            <input class="form-control mb-1" type="text" placeholder="enter your angst..." name="note" required>
-          </fieldset>
-          <input class="btn " type="submit" value="make post">
-        </form>
-    
+
+      <div class="btn-group">
+
+
+
+        <hr>
+        {% if loggedIn %}
+          <div>
+            <a class="btn btn-outline-dark " href="/themes/edit/{{theme.id}}" style="background-color: {{ post.boxColor }}">edit
+        </a>
+      </div>
+
+
+      <form action="/themes/{{theme.id}}?_method=DELETE" style="background-color: {{ post.boxColor }}" method="POST">
+        <input class="btn btn-outline-dark " type="submit" value="delete">
+      </form>
+      <form action="/posts/{{theme.id}}" method="POST">
+        <input class="btn btn-outline-dark " type="submit" value="make post">
+        <fieldset>
+          <label class="form-label">post box color:</label>
+          <input class="form-control" type="color" name="boxColor" class="form-control">
+          <label class="form-label">angst:</label>
+          <input class="form-control mb-1" type="text" placeholder="enter your angst..." name="note" required>
+        </fieldset>
+
+      </form>
+
     {% else %}
-      
-        <small>If you'd like to make an angsty post, please log in...</small>
-    
+
+      <small>If you'd like to make an angsty post, please log in...</small>
+
     {% endif %}
     <hr>
-  
+
   </div>
-  
+
 {% endblock %}
-
-
-

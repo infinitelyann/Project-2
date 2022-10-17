@@ -7,12 +7,15 @@ body {
 .dropdown{
     display: inline;
     height: fit-content;
-    
-    
-  
 }
+#edit-btn{
+    margin-left: 10px;
+}
+ul {
+    list-style-type: none;
+  }
 .btn{
-    display:inline ;
+    
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: underline;
@@ -54,9 +57,9 @@ body {
 }
 .post-image{
     height: 100%;
-    width:fit-content;
-  
-    
+    width:fit-content;    
 
 }
+
+
 
