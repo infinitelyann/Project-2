@@ -1,36 +1,36 @@
 {% layout 'layout.liquid'%}
 {% block content %}
-  <div>
-    <h2 class="display-6">All Themes</h2>
-    <div class="row">
-      {% for theme in themes %}
-        <div class="card" style="width: 18rem;">
-          <h5 class="card-header">{{ theme.title }}
-          </h5>
-          <div class="card-body">
-            <h5 class="card-title">
-              Background color:
-              {{ theme.backgroundColor }}
-            </h5>
-            <p class="card-text">
-              Foreground color:
-              {{ theme.foregroundColor }}
-            </p>
-            <p class="card-text">
-              Text color:
-              {{ theme.textColor }}
-            </p>
-            <p class="card-text">
-              Image:
-              {{ theme.image }}
-            </p>
-            <a href="/themes/{{ theme.id }}" class="btn btn-info">
-              View
-              {{ theme.title }}
-            </a>
-          </div>
-        </div>
-      {% endfor %}
+<div>
+  <h2 class="display-6">All Themes</h2>
+  <div class="row">
+    {% for theme in themes %}
+    <div class="card-body" style="width: 18rem;">
+      <h5 class="card-title">{{ theme.title }}
+      </h5>
+      <div class="card-body">
+        <h5 class="card-text" style="background-color:{{ theme.backgroundColor }}; color:{{ theme.textColor }};">
+          Background color:
+
+        </h5>
+        <p class="card-text" style="background-color:{{ theme.foregroundColor }}; color:{{ theme.textColor }};">
+          Foreground color:
+        </p>
+        <p class="card-text" style="color:{{ theme.textColor }}">
+          Text color:
+
+        </p>
+        <p class="card-text">
+          Image:
+          <img class="img-thumbnail" src="{{ theme.image }}">
+
+        </p>
+        <a href="/themes/{{ theme.id }}" class="btn btn-info">
+          View
+          {{ theme.title }}
+        </a>
+      </div>
     </div>
+    {% endfor %}
   </div>
+</div>
 {% endblock %}}}
