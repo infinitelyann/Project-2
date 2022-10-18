@@ -31,7 +31,7 @@ code .
 ##### in VSCode
 
 add variables for `PORT` `DATABASE_URL` `SECRET` in your `.env` - your `DATABASE_URL` will need to be your local mongo
-Ensure the API is functioning properly by running npm start.
+test by running `npm start` and opening your `localhost:{$PORT}` in your browser
 
 ### seed:
 
