@@ -15,23 +15,41 @@
 - Mongoose
 - Bootstrap
 
-### seed example 
+### installation:
+
+##### run the following commands in your terminal:
+
 ```
- const blogPosts = [
-   {theme: themeChoices[i], image: imageChoices[i], content: 'user input'}
- ]
- 
- const themeChoices = [
-   {background-color: black, font: 'fantasy', color: black},
-   {background-color: purples, font: 'helvetica', color: dark purple}
- ]
- 
- const imageChoice = [
-  image,
-  image,
-  image
- ]
- ```
+npm install
+npm install -g nodemon
+
+touch .env (make sure your env file is on the same level as server.js)
+touch .gitignore
+code .
+```
+
+##### in VSCode
+
+add variables for `PORT` `DATABASE_URL` `SECRET` in your `.env` - your `DATABASE_URL` will need to be your local mongo
+Ensure the API is functioning properly by running npm start.
+
+### seed:
+
+```
+	const startThemes = [
+		{ title:"shades of purple" , backgroundColor:"#251B37" , foregroundColor:"#FFECEF" , textColor:"#372948", image:"https://i.imgur.com/J5MNnff.jpg"},
+		{ title:"tropical sunshine" , backgroundColor:"#F48B29" , foregroundColor:"#374316", textColor: "#AC0D0D", image:"https://i.imgur.com/Cfk0Xpr.jpg" },
+		{ title:"forrest" , backgroundColor:"#3F4E4F" , foregroundColor:"#809A6F" , textColor:"#00303F", image:"https://i.imgur.com/mfCkfvf.jpg"},
+		{ title:"greyscale" , backgroundColor:"#171717" , foregroundColor:"#444444" , textColor:"#FAF3F3", image:"https://i.imgur.com/H0eIy5L.jpg"},
+		{ title:"neon", backgroundColor:"#4700D8" , foregroundColor:"#D800A6 ", textColor:"#9900F0", image:"https://i.imgur.com/JvFVvQw.jpg"},
+        { title:"angst", backgroundColor:"#151515" , foregroundColor:"#B4A5A5" , textColor:"#301B3F", image:"https://i.imgur.com/cGLSL4z.jpg" },
+        { title:"ocean", backgroundColor:"#1A374D" , foregroundColor:"#406882" , textColor:"#D4ECDD", image:"https://i.imgur.com/cQKxgE0.jpg" },
+        { title:"floral", backgroundColor:"#98DDCA" , foregroundColor:"#FFAAA7" , textColor:"#184D47", image:"https://i.imgur.com/OvKN0he.jpg"},
+        { title:"stormy", backgroundColor:"#334257" , foregroundColor:"#548CA8" , textColor:"#EEEEEE", image:"https://i.imgur.com/mzOyRAk.jpg" },
+        { title:"angsty night-time", backgroundColor:"#4C6793" , foregroundColor:"#000000" , textColor:"#c01813", image:"https://i.imgur.com/c5c41nr.jpg" }
+	]
+```
+
 # as a user,
 
 you will:
@@ -47,7 +65,6 @@ you will:
     -add the text content of your blog post in a form
     -be able to change theme before posting
 ```
-
 
 # WireFrames
 
@@ -90,6 +107,6 @@ After user sign-in, they will will be presented with a navbar, that will remain 
 
 <img width="796" alt="Screen Shot 2022-10-10 at 9 54 41 AM" src="https://user-images.githubusercontent.com/68655342/194883361-8c093515-5b13-4341-a1d9-42c3051ebc45.png">
 
+### Backup Plan
 
-### Backup Plan 
 -do a project with cars and allow user to post reviews on the vehicle
