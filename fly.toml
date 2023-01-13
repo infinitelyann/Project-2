@@ -12,7 +12,7 @@ processes = []
   PORT = "8080"
   SECRET = "CeceliaHeartbreaker"
   DEPLOYED_URL = "mongodb+srv://saparker:043097@angstyblogcluster.gotapn1.mongodb.net/angstyblog?retryWrites=true&w=majority"
-  CLIENT_ORIGIN = "
+  CLIENT_ORIGIN = "angstyblog.fly.dev"
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
