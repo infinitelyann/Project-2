@@ -1,240 +1,297 @@
 {% layout 'layout.liquid' %}
 {% block content %}
-  <div class="container-sm">
-    <form action="/themes" method="POST">
-      <fieldset>
-        <legend>Create New Theme</legend>
-        <label class="form-label">Title:
-        </label>
-        <input type="text" name="title" class="form-control">
-        <label class="form-label">Background Color:</label>
-        <hr>
-        <input class="form-control" type="color" name="backgroundColor" class="form-control">
-        <label class="form-label">Foreground Color:</label>
-        <hr>
-        <input class="form-control" type="color" name="foregroundColor" class="form-control">
-        <label class="form-label">Text Color:</label>
-        <hr>
-        <input class="form-control" type="color" name="textColor" class="form-control">
-        <label class="form-label">Choose Your Blog Image:</label>
-        <hr>
+<div class="container-sm">
+  <form action="/themes" method="POST">
+    <fieldset>
+      <legend>Create New Theme</legend>
+      <label class="form-label">Title:
+      </label>
+      <input type="text" name="title" class="form-control">
+      <label class="form-label">Background Color:</label>
+      <hr>
+      <input class="form-control" type="color" name="backgroundColor" class="form-control">
+      <label class="form-label">Foreground Color:</label>
+      <hr>
+      <input class="form-control" type="color" name="foregroundColor" class="form-control">
+      <label class="form-label">Text Color:</label>
+      <hr>
+      <input class="form-control" type="color" name="textColor" class="form-control">
+      <label class="form-label">Choose Your Blog Image:</label>
+      <hr>
 
-        <div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Comfy Cozy
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" name="image">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/UhTQJ0a.jpg">
-                <img src="https://i.imgur.com/UhTQJ0at.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/gigVpzi.jpg.jpg">
-                <img src="https://i.imgur.com/gigVpzit.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/fskqfXW.jpg">
-                <img src="https://i.imgur.com/fskqfXWt.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Critters
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/mfCkfvf.jpg"><img src="https://i.imgur.com/mfCkfvft.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/0QKejrF.jpg"><img src="https://i.imgur.com/0QKejrFt.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Water
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/2FjYELq.jpg"><img src="https://i.imgur.com/2FjYELqt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/dvrJDGc.jpg"><img src="https://i.imgur.com/dvrJDGct.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/b87CLnu.jpg"><img src="https://i.imgur.com/b87CLnut.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/vOtlK6P.jpg"><img src="https://i.imgur.com/vOtlK6Pt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/vt8Al5V.jpg"><img src="https://i.imgur.com/vt8Al5Vt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Gp2SiAS.jpg"><img src="https://i.imgur.com/Gp2SiASt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/pGpMkJC.jpg"><img src="https://i.imgur.com/pGpMkJCt.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Sky
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/GUyWxpP.jpg"><img src="https://i.imgur.com/GUyWxpPt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/4Yz5xMD.jpg"><img src="https://i.imgur.com/4Yz5xMDt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/5ML4Ba2.jpg"><img src="https://i.imgur.com/5ML4Ba2t.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://imgur.com/mzOyRAk"><img src="https://i.imgur.com/mzOyRAkt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/oLZxKdQ.jpg"><img src="https://i.imgur.com/oLZxKdQt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/QThOJeu.jpg"><img src="https://i.imgur.com/QThOJeut.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/H0eIy5L.jpg"><img src="https://i.imgur.com/H0eIy5Lt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/GBjoNXc.jpg"><img src="https://i.imgur.com/GBjoNXct.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-             Vegetation
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Wd3wn7T.jpg"><img src="https://i.imgur.com/Wd3wn7Tt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/DRwjP9q.jpg"><img src="https://i.imgur.com/DRwjP9qt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/hXwcCV9.jpg"><img src="https://i.imgur.com/hXwcCV9t.jpg"></input>
-              </li>
-               <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ua47jku.jpg"><img src="https://i.imgur.com/ua47jkut.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/jDSLFJX.jpg"><img src="https://i.imgur.com/jDSLFJXt.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/iTE2G7s.jpg"><img src="https://i.imgur.com/iTE2G7st.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/3mYLH53.jpg"><img src="https://i.imgur.com/3mYLH53t.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/w4ommzT.jpg"><img src="https://i.imgur.com/w4ommzTt.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/F5uG5pi.jpg"><img src="https://i.imgur.com/F5uG5pit.jpg"></input>
-              </li>
-                <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/EMTlx2E.jpg"><img src="https://i.imgur.com/EMTlx2Et.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Man Made
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Fh6tpOM.jpg"><img src="https://i.imgur.com/Fh6tpOMt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/8X8JE9J.jpg"><img src="https://i.imgur.com/8X8JE9Jt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/JvFVvQw.jpg"><img src="https://i.imgur.com/JvFVvQwt.jpg"></input>
-              </li>
-                  <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/9e6YPOI.jpg"><img src="https://i.imgur.com/9e6YPOIt.jpg"></input>
-              </li>
-                  <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ou3HTbd.jpg"><img src="https://i.imgur.com/ou3HTbdt.jpg"></input>
-              </li>
-                  <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/c5c41nr.jpg"><img src="https://i.imgur.com/c5c41nrt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/NeIUJxk.jpg"><img src="https://i.imgur.com/NeIUJxkt.jpg"></input>
-              </li>
-               <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/jJM0RHJ.jpg"><img src="https://i.imgur.com/jJM0RHJt.jpg"></input>
-              </li>
-               <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/WoZSvDQ.jpg"><img src="https://i.imgur.com/WoZSvDQt.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-               Rocks
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/p6jXTic.jpg"><img src="https://i.imgur.com/p6jXTict.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ifC2sMA.jpg"><img src="https://i.imgur.com/ifC2sMAt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/d6eUyef.jpg"><img src="https://i.imgur.com/d6eUyeft.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/REvaLTY.jpg"><img src="https://i.imgur.com/REvaLTYt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/t1Pl7qV.jpg"><img src="https://i.imgur.com/t1Pl7qVt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/9Mfgv77.jpg"><img src="https://i.imgur.com/9Mfgv77t.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/HaVHHOD.jpg"><img src="https://i.imgur.com/HaVHHODt.jpg"></input>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Mountains
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/CWutzPK.jpg"><img src="https://i.imgur.com/CWutzPKt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Squmidt.jpg"><img src="https://i.imgur.com/Squmidtt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value=""><img src=""></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/j3Js50l.jpg"><img src="https://i.imgur.com/j3Js50lt.jpg"></input>
-              </li>
-              <li>
-                <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/idXhFKr.jpg"><img src="https://i.imgur.com/idXhFKrt.jpg"></input>
-              </li>
-            </ul>
-          </div>
+      <div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Comfy Cozy
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" name="image">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/UhTQJ0a.jpg">
+              <img src="https://i.imgur.com/UhTQJ0at.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/gigVpzi.jpg.jpg">
+              <img src="https://i.imgur.com/gigVpzit.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/fskqfXW.jpg">
+              <img src="https://i.imgur.com/fskqfXWt.jpg"></input>
+            </li>
+          </ul>
         </div>
-      </fieldset>
-      <input type="submit" value="Create Theme" class="btn btn-success">
-    </form>
-  </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Critters
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/mfCkfvf.jpg"><img
+                src="https://i.imgur.com/mfCkfvft.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/0QKejrF.jpg"><img
+                src="https://i.imgur.com/0QKejrFt.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Water
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/2FjYELq.jpg"><img
+                src="https://i.imgur.com/2FjYELqt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/dvrJDGc.jpg"><img
+                src="https://i.imgur.com/dvrJDGct.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/b87CLnu.jpg"><img
+                src="https://i.imgur.com/b87CLnut.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/vOtlK6P.jpg"><img
+                src="https://i.imgur.com/vOtlK6Pt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/vt8Al5V.jpg"><img
+                src="https://i.imgur.com/vt8Al5Vt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Gp2SiAS.jpg"><img
+                src="https://i.imgur.com/Gp2SiASt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/pGpMkJC.jpg"><img
+                src="https://i.imgur.com/pGpMkJCt.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Sky
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/GUyWxpP.jpg"><img
+                src="https://i.imgur.com/GUyWxpPt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/4Yz5xMD.jpg"><img
+                src="https://i.imgur.com/4Yz5xMDt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/5ML4Ba2.jpg"><img
+                src="https://i.imgur.com/5ML4Ba2t.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://imgur.com/mzOyRAk"><img
+                src="https://i.imgur.com/mzOyRAkt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/oLZxKdQ.jpg"><img
+                src="https://i.imgur.com/oLZxKdQt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/QThOJeu.jpg"><img
+                src="https://i.imgur.com/QThOJeut.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/H0eIy5L.jpg"><img
+                src="https://i.imgur.com/H0eIy5Lt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/GBjoNXc.jpg"><img
+                src="https://i.imgur.com/GBjoNXct.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Vegetation
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Wd3wn7T.jpg"><img
+                src="https://i.imgur.com/Wd3wn7Tt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/DRwjP9q.jpg"><img
+                src="https://i.imgur.com/DRwjP9qt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/hXwcCV9.jpg"><img
+                src="https://i.imgur.com/hXwcCV9t.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ua47jku.jpg"><img
+                src="https://i.imgur.com/ua47jkut.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/jDSLFJX.jpg"><img
+                src="https://i.imgur.com/jDSLFJXt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/iTE2G7s.jpg"><img
+                src="https://i.imgur.com/iTE2G7st.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/3mYLH53.jpg"><img
+                src="https://i.imgur.com/3mYLH53t.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/w4ommzT.jpg"><img
+                src="https://i.imgur.com/w4ommzTt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/F5uG5pi.jpg"><img
+                src="https://i.imgur.com/F5uG5pit.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/EMTlx2E.jpg"><img
+                src="https://i.imgur.com/EMTlx2Et.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Man Made
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Fh6tpOM.jpg"><img
+                src="https://i.imgur.com/Fh6tpOMt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/8X8JE9J.jpg"><img
+                src="https://i.imgur.com/8X8JE9Jt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/JvFVvQw.jpg"><img
+                src="https://i.imgur.com/JvFVvQwt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/9e6YPOI.jpg"><img
+                src="https://i.imgur.com/9e6YPOIt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ou3HTbd.jpg"><img
+                src="https://i.imgur.com/ou3HTbdt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/c5c41nr.jpg"><img
+                src="https://i.imgur.com/c5c41nrt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/NeIUJxk.jpg"><img
+                src="https://i.imgur.com/NeIUJxkt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/jJM0RHJ.jpg"><img
+                src="https://i.imgur.com/jJM0RHJt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/WoZSvDQ.jpg"><img
+                src="https://i.imgur.com/WoZSvDQt.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Rocks
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/p6jXTic.jpg"><img
+                src="https://i.imgur.com/p6jXTict.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/ifC2sMA.jpg"><img
+                src="https://i.imgur.com/ifC2sMAt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/d6eUyef.jpg"><img
+                src="https://i.imgur.com/d6eUyeft.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/REvaLTY.jpg"><img
+                src="https://i.imgur.com/REvaLTYt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/t1Pl7qV.jpg"><img
+                src="https://i.imgur.com/t1Pl7qVt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/9Mfgv77.jpg"><img
+                src="https://i.imgur.com/9Mfgv77t.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/HaVHHOD.jpg"><img
+                src="https://i.imgur.com/HaVHHODt.jpg"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Mountains
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/CWutzPK.jpg"><img
+                src="https://i.imgur.com/CWutzPKt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/Squmidt.jpg"><img
+                src="https://i.imgur.com/Squmidtt.jpg"></input>
+            </li>
+            <li>
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/j3Js50l.jpg"><img
+                src="https://i.imgur.com/j3Js50lt.jpg"></input>
+            </li>
+            <li>
+
+              <input class="dropdown-item" type="radio" name="image" value="https://i.imgur.com/idXhFKr.jpg"><img
+                src="https://i.imgur.com/idXhFKrt.jpg"></input>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <input type="cell" value="{{theme.image}}" disabled>
+    </fieldset>
+
+
+    <input style="display:none;" type="submit" value="Create Theme" class="btn btn-outline-dark">
+
+  </form>
+</div>
 {% endblock %}
