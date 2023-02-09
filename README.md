@@ -107,6 +107,9 @@ After user sign-in, they will will be presented with a navbar, that will remain 
 
 <img width="796" alt="Screen Shot 2022-10-10 at 9 54 41 AM" src="https://user-images.githubusercontent.com/68655342/194883361-8c093515-5b13-4341-a1d9-42c3051ebc45.png">
 
-### Backup Plan
+# REVISIT GOALS
+   -find out why mongo error on signup
+   -redirect after post create
+   -add more photos 
+   -retouch user experience: border radius, font, landing page
 
--do a project with cars and allow user to post reviews on the vehicle
