@@ -6,7 +6,7 @@ const express = require('express')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
 const session = require('express-session')
-const MongoStore = require('connect-mongo')
+const MongoDBStore = require('connect-mongo')
 
 /////////////////////////////////
 // Middleware function
@@ -19,7 +19,7 @@ const middleware = (app) => {
 	app.use(
 		session({
 			secret: process.env.SECRET,
-			store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+			store: MongoDBStore.create({ mongoUrl: process.env.MONGODB_URI }),
 			saveUninitialized: true,
 			resave: false,
 		})
