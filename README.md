@@ -111,5 +111,6 @@ After user sign-in, they will will be presented with a navbar, that will remain 
    -find out why mongo error on signup
    -redirect after post create
    -add more photos 
-   -retouch user experience: border radius, font, landing page
-
+   -retouch user experience- post navbar, comments display 
+   -implement "mood" in database 
+   
